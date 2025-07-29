@@ -25,11 +25,11 @@
         <div class="row">
             <?php require_once "navbarcopy.php"; ?>
         </div>
-
+        <div class="row mt-5"></div>
         <div class="row mx-auto">
             <div class="col-md-9">
                 <form class="form" action="insertProduct.php" method="post" enctype="multipart/form-data">
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <div class="mb-1 bg-light">
                             <label for="pname" class="form-label">Product Name</label>
                             <input type="text" class="form-control" name="pname">
