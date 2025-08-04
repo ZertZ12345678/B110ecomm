@@ -1,5 +1,12 @@
 <?php
 require_once "dbconnect.php";
+if(!isset($_SESSION))
+{ // session will be opened when it does not exit.
+    session_start();
+}
+
+
+
  try{
         $sql = "select * from category";
         $stmt = $conn->prepare($sql);
@@ -31,6 +38,7 @@ require_once "dbconnect.php";
                 $id = $conn->lastInsertId();
                 if($flag){
                     $message = "new product with id $id has been inserted successfully!";
+                    $_SESSION["message"]= $message;
                     header("Location:viewProduct.php");
                 }
 
